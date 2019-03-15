@@ -16,7 +16,7 @@
 		       		RaiseConvertibleRoof(vehicle, false)
 		       		if IsEntityAttached(player) then
 						SetTextComponentFormat("STRING")
-						AddTextComponentString('~INPUT_JUMP~ neviditelnost ~n~~s~~INPUT_CHARACTER_WHEEL~+~INPUT_COVER~ vyskocit')
+						AddTextComponentString('~INPUT_JUMP~ Invisible ~n~~s~~INPUT_CHARACTER_WHEEL~+~INPUT_COVER~ Pop Up')
 						DisplayHelpTextFromStringLabel(0, 1, 1, -1)	
 						ClearPedTasksImmediately(player)
 						Citizen.Wait(100)	       			
@@ -59,10 +59,7 @@
 		   			EnableControlAction(2, 2, true) --- camera moving	
 		   			EnableControlAction(0, 177, true) --- BACKSPACE
 		   			EnableControlAction(0, 200, true) --- ESC					
-		     			if IsDisabledControlJustPressed(1, 22) then
-		     				if visible then
-		    					SetEntityVisible(player, false, false)
-		    					visible = false			
+		     					
 		    				end   	
 		    			end 					
 			elseif not DoesEntityExist(vehicle) and inside then
